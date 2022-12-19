@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div id ="xyz" class="bg-container">
+   <form #userForm="ngForm" >
+    <div class="form-group">
+      <label for="name"><h2>Name</h2></label>
+  <input style="width: 100px; display: center;"  #name="ngModel" required minlength="3"maxlength="10" type="text" name="name" class="form-control" [(ngModel)]="final.name">
+  <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Invalid</div>
+  </div>
+  
+    <div class="form-group"><label for="address"><h2>Street</h2></label> <input style="width: 100px;" #address="ngModel" required minlength="3"maxlength="20" type="text" name="address" class="form-control" [(ngModel)]="final.add">
+      <div *ngIf="address.touched && address.invalid" class="alert alert-danger">Invalid</div>
+    </div>
+    <div class="form-group"><label for="city"><h2>City</h2></label> <input style="width: 100px;" #city="ngModel"  required minlength="3"maxlength="20" type="text" name="city" class="form-control" [(ngModel)]="final.city">
+      <div *ngIf="city.touched && city.invalid" class="alert alert-danger">Invalid</div>
+    </div>
+    <div class="form-group"><label for="state"><h2>State</h2></label> <input style="width: 100px;" #state="ngModel"  required minlength="3"maxlength="20" type="text" name="state" class="form-control" [(ngModel)]="final.state">
+        <div *ngIf="state.touched && state.invalid" class="alert alert-danger">Invalid</div>
+      </div>
+      <div class="form-group"><label for="country"><h2>Country</h2></label> <input style="width: 100px;" #country="ngModel"  required minlength="3"maxlength="20" type="text" name="country" class="form-control" [(ngModel)]="final.country">
+        <div *ngIf="country.touched && country.invalid" class="alert alert-danger">Invalid</div>
+      </div>
+   
+      <button style="width: 100px;height: 30px;" [disabled]="userForm.invalid" (click)="registerForm()">Submit</button>
+
+  </form>
+  </div>
+    <router-outlet></router-outlet>

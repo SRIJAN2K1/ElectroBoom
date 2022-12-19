@@ -1,0 +1,64 @@
+<app-admin-header></app-admin-header>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let e of productList">
+            <div *ngIf="e.n==='Arduino'" class="card col-md-3">
+                <img [src]="Arduino">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+               
+             </div>
+             <div *ngIf="e.n==='Plc'" class="card col-md-3">
+                <img [src]="Plc">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+       
+             </div>
+             <div *ngIf="e.n==='Sensors'" class="card col-md-3">
+                <img [src]="Sensors">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+           
+             </div>
+             <div *ngIf="e.n==='Transistors'" class="card col-md-3">
+                <img [src]="Transistors">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+                
+             </div>
+             <div *ngIf="e.n==='HMI'" class="card col-md-3">
+                <img [src]="HMI">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+  
+             </div>
+             <div *ngIf="e.n==='Solenoid'" class="card col-md-3">
+                <img [src]="Solenoid">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+       
+             </div>
+             <div *ngIf="e.n==='ZSS'" class="card col-md-3">
+                <img [src]="ZSS">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+              
+             </div>
+             <div *ngIf="e.n!='LEDs' && e.n!='ZSS' && e.n!='Solenoid' && e.n!='Transistors'&& e.n!='HMI' && e.n!='Arduino' && e.n!='Plc' && e.n!='Sensors'" class="card col-md-3">
+                <img [src]="xyz">
+                <h5>{{e.n}}</h5>
+                <h5>{{e.f}}</h5>
+                <h5>{{e.s}}</h5>
+              
+             </div>
+        </ng-container>
+        </div>     
+    </div>
+<router-outlet></router-outlet>

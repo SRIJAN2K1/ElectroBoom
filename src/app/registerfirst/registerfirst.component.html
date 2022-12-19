@@ -1,0 +1,24 @@
+<div id ="xyz" class="bg-container" *ngIf="showHead">
+    <img style="background-color: bisque;width:200px;height:150px" [src]="myimage">
+   <form #userForm="ngForm" (ngSubmit)="registerForm(userForm.value)">
+    <div class="form-group">
+      <label for="name"><h2>Name</h2></label>
+  <input style="width: 100px; display: center;"  #name="ngModel" required minlength="3"maxlength="10" type="text" name="name" class="form-control" [(ngModel)]="users.name">
+  <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Invalid</div>
+  </div>
+  
+    <div class="form-group"><label for="email"><h2>Email</h2></label> <input style="width: 100px;" #email="ngModel" required minlength="3"maxlength="20" type="text" name="email" class="form-control" [(ngModel)]="users.email">
+      <div *ngIf="email.touched && email.invalid" class="alert alert-danger">Invalid</div>
+    </div>
+    <div class="form-group"><label for="pwd"><h2>Password</h2></label> <input style="width: 100px;" #pwd="ngModel"  required minlength="3"maxlength="10" type="password" name="pwd" class="form-control" [(ngModel)]="users.pwd">
+      <div *ngIf="pwd.touched && pwd.invalid" class="alert alert-danger">Invalid</div>
+    </div>
+    <div class="form-group">
+      <label for="user"><h2>User</h2></label><br>
+      <label class="radio-inline">
+   <input style="padding: 10px;" type="radio" required name="user" value="Admin" [(ngModel)]="users.user"><h5>Admin</h5></label>
+   <label class="radio-inline"> <input style="padding: 10px;" type="radio" required name="user" value="User"  [(ngModel)]="users.user"><h5>User</h5></label><br><br>
+      <button style="width: 100px;height: 30px;" [disabled]="userForm.invalid" value="Log In">Register</button></div>
+  </form>
+  </div>
+    <router-outlet></router-outlet>

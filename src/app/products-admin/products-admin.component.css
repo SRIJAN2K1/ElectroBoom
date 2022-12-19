@@ -1,0 +1,17 @@
+
+ .alert-danger{
+     background-color:red;
+ }
+ .container{background-position: 50% 50%;position: absolute;
+    height:100%;width: 100%;  display: flex;justify-content: center;align-items: center;flex-direction: column;
+  }
+  .form{
+      display: flex;justify-content: center;align-items: center;flex-direction: column;
+  }
+  
+.bg-container{background-position: 50% 50%;position: absolute;
+    height:100%;width: 100%;  display: flex;justify-content: center;align-items: center;flex-direction: column;
+  }
+  .form{
+      display: flex;justify-content: center;align-items: center;flex-direction: column;
+  }

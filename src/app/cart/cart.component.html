@@ -1,0 +1,145 @@
+<app-header></app-header>
+<div class="container">
+    <ng-container *ngIf="product.length!=0">   
+    <div class="row">
+        <ng-container *ngFor="let e of product;let j=index">
+        <div *ngIf="e.item.n==='Arduino'" class="card col-md-3">
+                <img [src]="Arduino">
+                    <h5>Item- {{e.item.n}}</h5>
+                    <h5 >Function- {{e.item.f}}</h5>
+                    <h5>Price-{{e.item.price * e.qty}}</h5>
+                    <h5>Qty- {{e.qty}}</h5>
+                    <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                    <input style="text-align:center" type="text" [value]="qt(e)">
+                    <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                    
+                   
+        </div>
+                    <div *ngIf="e.item.n==='Plc'" class="card col-md-3">
+                        <img [src]="Plc">
+                            <h5>Item- {{e.item.n}}</h5>
+                            <h5 >Function- {{e.item.f}}</h5>
+                            <h5>Price- {{e.item.price * e.qty}}</h5>
+                            <h5>Qty- {{e.qty}}</h5>
+                            <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                            <input style="text-align:center" type="text" [value]="qt(e)">
+                            <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                    </div>
+                            <div *ngIf="e.item.n==='Sensors'" class="card col-md-3">
+                                <img [src]="Sensors">
+                                    <h5>Item- {{e.item.n}}</h5>
+                                    <h5 >Function- {{e.item.f}}</h5>
+                                    <h5>Price- {{e.item.price * e.qty}}</h5>
+                                    <h5>Qty- {{e.qty}}</h5>
+                                    <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                    <input style="text-align:center" type="text" [value]="qt(e)">
+                                    <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                            </div>
+                                    <div *ngIf="e.item.n==='HMI'" class="card col-md-3">
+                                        <img [src]="HMI">
+                                            <h5>Item- {{e.item.n}}</h5>
+                                            <h5 >Function- {{e.item.f}}</h5>
+                                            <h5>Price- {{e.item.price * e.qty}}</h5>
+                                            <h5>Qty- {{e.qty}}</h5>
+                                            <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                            <input style="text-align:center" type="text" [value]="qt(e)">
+                                            <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                            <div *ngIf="e.item.n==='Transistors'" class="card col-md-3">
+                                                <img [src]="Transistors">
+                                                    <h5>Item- {{e.item.n}}</h5>
+                                                    <h5 >Function- {{e.item.f}}</h5>
+                                                    <h5>Price- {{e.item.price * e.qty}}</h5>
+                                                    <h5>Qty- {{e.qty}}</h5>
+                                                    <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                                    <input style="text-align:center" type="text" [value]="qt(e)">
+                                                    <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                            </div>
+                                                    <div *ngIf="e.item.n==='Solenoid'" class="card col-md-3">
+                                                        <img [src]="Solenoid">
+                                                            <h5>Item- {{e.item.n}}</h5>
+                                                            <h5 >Function- {{e.item.f}}</h5>
+                                                            <h5>Price- {{e.item.price * e.qty}}</h5>
+                                                            <h5>Qty- {{e.qty}}</h5>
+                                                            <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                                            <input style="text-align:center" type="text" [value]="qt(e)">
+                                                            <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                                    </div>
+                                                            <div *ngIf="e.item.n==='ZSS'" class="card col-md-3">
+                                                                <img [src]="ZSS">
+                                                                    <h5>Item- {{e.item.n}}</h5>
+                                                                    <h5 >Function- {{e.item.f}}</h5>
+                                                                    <h5>Price- {{e.item.price * e.qty}}</h5>
+                                                                    <h5>Qty- {{e.qty}}</h5>
+                                                                    <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                                                    <input style="text-align:center" type="text" [value]="qt(e)">
+                                                                    <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                                            </div>
+                                                                    <div *ngIf="e.item.n==='LEDs'" class="card col-md-3">
+                                                                        <img [src]="LEDs">
+                                                                            <h5>Item- {{e.item.n}}</h5>
+                                                                            <h5 >Function- {{e.item.f}}</h5>
+                                                                            <h5>Price- {{e.item.price * e.qty}}</h5>
+                                                                            <h5>Qty- {{e.qty}}</h5>
+                                                                            <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                                                            <input style="text-align:center" type="text" [value]="qt(e)">
+                                                                            <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                                                    </div>
+                                                                    <div *ngIf="e.item.n==='Battery'" class="card col-md-3">
+                                                                        <img [src]="Battery">
+                                                                            <h5>Item- {{e.item.n}}</h5>
+                                                                            <h5 >Function- {{e.item.f}}</h5>
+                                                                            <h5>Price- {{e.item.price * e.qty}}</h5>
+                                                                            <h5>Qty- {{e.qty}}</h5>
+                                                                            <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                                                            <input style="text-align:center" type="text" [value]="qt(e)">
+                                                                            <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                                                    </div>
+                                                                    <div *ngIf="e.item.n==='TeslaCoil'" class="card col-md-3">
+                                                                        <img [src]="TeslaCoil">
+                                                                            <h5>Item- {{e.item.n}}</h5>
+                                                                            <h5 >Function- {{e.item.f}}</h5>
+                                                                            <h5>Price- {{e.item.price * e.qty}}</h5>
+                                                                            <h5>Qty- {{e.qty}}</h5>
+                                                                            <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                                                            <input style="text-align:center" type="text" [value]="qt(e)">
+                                                                            <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                                                    </div>
+                                                                    <div *ngIf="e.item.n!='LEDs' && e.item.n!='ZSS' && e.item.n!='Solenoid' && e.item.n!='Transistors'&& e.item.n!='HMI' && e.item.n!='Arduino' && e.item.n!='Plc' && e.item.n!='Sensors' && e.item.n!='Battery' && e.item.n!='TeslaCoil'" class="card col-md-3">
+                                                                        <img [src]="abcd">
+                                                                            <h5>Item- {{e.item.n}}</h5>
+                                                                            <h5 >Function- {{e.item.f}}</h5>
+                                                                            <h5>Price- {{e.item.price * e.qty}}</h5>
+                                                                            <h5>Qty- {{e.qty}}</h5>
+                                                                            <button type="button" (click)="plus(e)"><i class="fa fa-plus"></i></button>
+                                                                            <input style="text-align:center" type="text" [value]="qt(e)">
+                                                                            <button type="button" (click)="minus(e)"><i class="fa fa-minus"></i></button>
+                                                                    </div>                                                                
+
+    </ng-container>
+    </div> 
+      
+        <button  style="text-align:center;width:200px;height:50px;margin-right: 200px;" class="btn btn-danger" (click)="pay()">PAY = {{cart.mee}}</button>
+    </ng-container>
+    </div>
+<ng-container *ngIf="product===null">
+<div class="container">
+    <div class="card">
+        <img [src]="emptyCart">
+        <button style="width:100px;height:50px;" class="btn btn-danger" (click)="shift()">Shop Now</button>
+  </div></div></ng-container>
+    <div style="text-align:center">
+        <!-- <ng-container *ngIf="product.length===null">
+        <button  style="text-align:center;width:50px;height:50px;margin-right: 200px;" class="btn btn-danger" (click)="pay()">PAY</button>
+    </ng-container> -->
+    <ng-container *ngIf="product.length===0">
+        <div class="container">
+            <div class="card">
+                <img [src]="emptyCart">
+                <button style="width:200px;height:50px;text-align: center;" class="btn btn-danger" (click)="shift()">Shop Now</button>
+          </div></div></ng-container>
+            <div style="text-align:center">
+                
+      
+    </div>
+<router-outlet></router-outlet>

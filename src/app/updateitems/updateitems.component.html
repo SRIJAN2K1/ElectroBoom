@@ -1,0 +1,32 @@
+<app-admin-header></app-admin-header>
+<div class="bg-container">
+<form  #userForm="ngForm" (ngSubmit)="registerForm(userForm.value)">
+   <h1 style="text-align:center">PRODUCT DETAILS</h1>
+   <div class="form-group">
+      <label for="items"><h2>Item</h2></label>
+<input style="width: 100px; display: center;"  #items="ngModel" required minlength="3"maxlength="50" 
+ type="text" class="form-input" name="items" ngModel="{{temp?.n}}"/>
+ <div *ngIf="items.touched && items.invalid" class="alert alert-danger">Invalid</div>
+</div>
+<div class="form-group">
+   <label for="funct"><h2>Function</h2></label>
+<input style="width: 100px; display: center;"  #funct="ngModel" required minlength="3"maxlength="50" 
+type="text" class="form-input" name="funct" ngModel="{{temp?.f}}"/>
+<div *ngIf="funct.touched && funct.invalid" class="alert alert-danger">Invalid</div>
+</div>
+<div class="form-group">
+   <label for="specs"><h2>Specification</h2></label>
+<input style="width: 100px; display: center;"  #specs="ngModel" required minlength="3"maxlength="50" 
+type="text" class="form-input" name="specs" ngModel="{{temp?.s}}"/>
+<div *ngIf="specs.touched && specs.invalid" class="alert alert-danger">Invalid</div>
+</div>
+<div class="form-group">
+   <label for="price"><h2>Price</h2></label>
+<input style="width: 100px; display: center;"  #price="ngModel" required minlength="3"maxlength="50" 
+type="text" class="form-input" name="price" ngModel="{{temp?.price}}"/>
+<div *ngIf="price.touched && price.invalid" class="alert alert-danger">Invalid</div>
+</div>
+<button style="width: 100px;height: 30px;"  value="submit">Submit</button>
+</form>    
+ </div>
+   <router-outlet></router-outlet>

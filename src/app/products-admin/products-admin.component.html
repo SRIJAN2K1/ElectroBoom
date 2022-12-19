@@ -1,0 +1,29 @@
+<app-admin-header></app-admin-header>
+<div class="bg-container">
+
+   <h1 style="margin-bottom: 40px;">PRODUCT DETAILS</h1>
+<form #userForm="ngForm" (ngSubmit)="registerForm(userForm.value)">
+    <div class="form-group"><label for="items">Item</label><br>
+ <input  style="width: 100px; display: center;"  #items="ngModel" required minlength="3"maxlength="10" type="text" name="items" class="form-control" [(ngModel)]="addit.items"><br>
+ <div *ngIf="items.touched && items.invalid" class="alert alert-danger">Invalid</div>
+    </div>
+    <div class="form-group"><label for="fun">Function</label><br>
+   <input  style="width: 100px; display: center;"   #fun="ngModel" required minlength="3"maxlength="20" type="text" name="fun" class="form-control" [(ngModel)]="addit.fun"><br>
+   <div *ngIf="fun.touched && fun.invalid" class="alert alert-danger">Invalid</div>
+    </div>
+    <div class="form-group"><label for="specs">Specification</label><br>
+ <input  style="width: 100px; display: center;"   #specs="ngModel" required minlength="3"maxlength="20" type="text" name="specs" class="form-control"  [(ngModel)]="addit.specs"><br>
+ <div *ngIf="specs.touched && specs.invalid" class="alert alert-danger">Invalid</div>
+ </div>
+ <div class="form-group"><label for="price">Price</label><br>
+   <input  style="width: 100px; display: center;"  #price="ngModel" required minlength="1"maxlength="10" type="text" name="price" class="form-control"  [(ngModel)]="addit.price"><br>
+   <div *ngIf="price.touched && price.invalid" class="alert alert-danger">Invalid</div>
+     </div>
+     <div class="form-group"><label for="price">Image</label><br>
+      <input  style="width: 100px; display: center;"  #image="ngModel" required minlength="1"maxlength="200" type="text" name="image" class="form-control"  [(ngModel)]="try"><br>
+      <div *ngIf="image.touched && image.invalid" class="alert alert-danger">Invalid</div>
+        </div>
+    <input type="submit" value="Submit">
+    </form>    
+    </div>
+   <router-outlet></router-outlet>
